@@ -6,11 +6,18 @@ const map = new maplibregl.Map({
   center: [139.6917, 35.6895], // Tokyo
   zoom: 13,
   pitch: 45,
-  bearing: -20
+  bearing: -20,
+  attributionControl: false 
 });
 
-map.addControl(new maplibregl.NavigationControl());
+map.addControl(
+  new maplibregl.AttributionControl({
+    compact: false, // Set to true if you want it to collapse into an 'i' icon on mobile
+    customAttribution: "Sound effects - <a href='https://sound-effects.bbcrewind.co.uk/' target='_blank' rel='noopener noreferrer'>bbc.co.uk</a> – © copyright 2026 BBC"
+  })
+);
 
+map.addControl(new maplibregl.NavigationControl());
 // --------------------------------------------------
 // AUDIO OBJECTS (REUSABLE ARCHITECTURE)
 // --------------------------------------------------
