@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Oto Fūkei</title>
+
+  <link
+    href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    #map {
+      position: absolute;
+      inset: 0;
+    }
+
+    #debug {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+
+      width: 320px;
+      max-height: 80vh;
+      overflow: auto;
+
+      background: rgba(0,0,0,0.8);
+      color: white;
+
+      padding: 12px;
+      border-radius: 8px;
+
+      font-size: 13px;
+      line-height: 1.4;
+      z-index: 10;
+    }
+    #startAudio {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 20;
+
+  padding: 12px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: black;
+  color: white;
+
+  cursor: pointer;
+}  
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>  
+  <button id="startAudio">
+  Start Sound
+  </button>  
+  <div id="debug"></div>
+
+  <script src="https://unpkg.com/tone"></script>  
+  <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+  <script src="soundapp.js"></script>
+</body>
+</html>
